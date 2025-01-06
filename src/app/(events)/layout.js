@@ -7,6 +7,7 @@ import {Kodchasan} from 'next/font/google';
 import "./globals.css";
 import Navbar from '../../components/navbar/page.js'
 import Footer from '../../components/Footer'
+import Header from '@/components/header/header'
 import { useState } from 'react';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -22,8 +23,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        
+        {/* <Navbar /> */}
+        <Header/>
         <main>
           <section className="min-h-screen flex flex-col justify-center items-center text-center relative">
             <div className={`text-xl font-bold text-white bg-gradient-to-r from-green-500 to-transparent px-6 py-2 my-2 rounded-full ${kodchasan.className}`}>
