@@ -32,7 +32,7 @@ export default function Page() {
     <div>
       <section className="bg-[#12181E] flex justify-between items-center px-[4%] py-[1.4%]">
         {/* Logo */}
-        <div className="w-[17%]">
+        <div className="md:w-[17%] w-[35%]">
           <div className="aspect-[895/127]">
             <Image
               src={logo}
@@ -46,7 +46,7 @@ export default function Page() {
         <div className="flex">
           {!isOpen && (
             <Link href="/signin">
-              <button className="text-white py-[2%] px-8 text-lg rounded-full bg-gradient-to-b from-[#43F27F] to-[#0A772F] mr-5">
+              <button className="text-white md:py-[2%] py-[1.7%] px-6 md:px-8 text-lg rounded-full bg-gradient-to-b from-[#43F27F] to-[#0A772F] mr-5">
                 SIGN IN
               </button>
             </Link>
