@@ -1,6 +1,10 @@
 import { User, Mail, Phone, X } from "lucide-react";
 import { FaFacebookF } from "react-icons/fa";
-import { TbBrandInstagramFilled, TbBrandTiktokFilled, TbBrandYoutubeFilled } from "react-icons/tb";
+import {
+  TbBrandInstagramFilled,
+  TbBrandTiktokFilled,
+  TbBrandYoutubeFilled,
+} from "react-icons/tb";
 
 export default function Footer() {
   return (
@@ -11,6 +15,7 @@ export default function Footer() {
       >
         <div className="flex flex-col items-center justify-center h-full w-full gap-1 md:gap-4 font-serif">
           <section className="w-full md:h-2/5 h-1/5"></section>
+
           <section className="text-white text-5xl md:text-8xl font-bold font-sans z-50">TECHFEST</section>
           <section className="text-white max-w-lg md:max-w-3xl text-center text-lg md:text-xl font-sans mt-8">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</section>
           <div className="w-2/5 h-[1px] bg-gradient-to-r from-[#40EC7B00] via-[#FFFFFF] to-[#40EC7B00]"></div>
@@ -34,7 +39,6 @@ export default function Footer() {
             <button className="md:h-16 md:w-16 md:p-5 h-12 w-12 p-3.5 rounded-[50%] bg-gradient-to-r from-[#43F27F] to-[#0A772F] text-center"><TbBrandYoutubeFilled className="md:text-2xl text-xl" color="white" fill="white" /></button>
             <button className="md:h-16 md:w-16 md:p-5 h-12 w-12 p-3.5 rounded-[50%] bg-gradient-to-r from-[#43F27F] to-[#0A772F] text-center"><TbBrandTiktokFilled className="md:text-2xl text-xl" color="white" fill="white" /></button>
           </section>
-
         </div>
       </div>
 
@@ -42,5 +46,5 @@ export default function Footer() {
       <img src="/signin/bg4bl.png" alt="background image" className="pointer-events-none absolute bottom-0 left-0 hidden md:block" />
       <img src="/signin/bg4line.png" alt="background image" className="pointer-events-none absolute bottom-3/4 right-0 w-1/2" />
     </div>
-  )
+  );
 }
