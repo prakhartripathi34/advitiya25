@@ -148,7 +148,7 @@ export default function Page() {
         <Image src={sec3bg} className="pt-10" alt="Decoration" />
       </section>
 
-      <section className="h-[100vh] bg-[#091418] px-[10%]">
+      <section className="bg-[#091418] p-[10%]">
         <div className="flex flex-col sm:flex-row md:justify-between items-center ">
           <div className="flex flex-col w-[50%] items-center sm:items-start  sm:w-[50%]  pt-[10%] sm:p-[5%]">
             <span className="text-[#3BE174] 2xl:text-xl xl:text-lg lg:text-base md:text-base sm:text-base text-base">
