@@ -1,0 +1,52 @@
+.marqueeContainer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.marquee {
+  display: flex;
+  width: calc(200%);
+  animation: marquee 30s linear infinite;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logoItem {
+  flex-shrink: 0;
+  margin: 0 10px;
+}
+
+.logoImage {
+  height: 120px;
+}
+
+@media (min-width: 768px) {
+  .marqueeContainer {
+    height: 250px;
+  }
+  .logoImage {
+    height: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .marqueeContainer {
+    height: 300px;
+  }
+  .logoImage {
+    height: 300px;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

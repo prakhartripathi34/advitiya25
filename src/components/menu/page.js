@@ -1,8 +1,7 @@
-'use client'
+"use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Link from 'next/link';
-
+import Link from "next/link";
 
 export default function Menu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,10 +13,7 @@ export default function Menu() {
   return (
     <div className="relative">
       {/* Menu Button */}
-      <button
-        onClick={toggleMenu}
-        className="text-white py-[2%]  text-lg mx-4"
-      >
+      <button onClick={toggleMenu} className="text-white py-[2%]  text-lg mx-4">
         MENU
       </button>
 
@@ -40,11 +36,48 @@ export default function Menu() {
 
           {/* Menu Items */}
           <div className="text-center text-white space-y-4">
-          <Link href="/" onClick={toggleMenu} className="text-3xl hover:text-green-400 px-10">Home</Link>
-          <Link href="/comingSoon" onClick={toggleMenu} className="text-3xl hover:text-green-400 px-10">Workshops</Link>
-          <Link href="/events" onClick={toggleMenu} className="text-3xl hover:text-green-400 px-10">Events</Link>
-            <Link href="/comingSoon" onClick={toggleMenu} className="text-3xl hover:text-green-400 px-10">Our Team</Link>
-            <Link href="/contactus" onClick={toggleMenu} className="text-3xl hover:text-green-400 px-10">Contact US</Link>
+            <Link
+              href="/"
+              onClick={toggleMenu}
+              className="text-3xl hover:text-green-400 px-10"
+            >
+              Home
+            </Link>
+            <Link
+              href="/comingSoon"
+              onClick={toggleMenu}
+              className="text-3xl hover:text-green-400 px-10"
+            >
+              Workshops
+            </Link>
+            <Link
+              href="/events"
+              onClick={toggleMenu}
+              className="text-3xl hover:text-green-400 px-10"
+            >
+              Events
+            </Link>
+            <Link
+              href="/sponsors"
+              onClick={toggleMenu}
+              className="text-3xl hover:text-green-400 px-10"
+            >
+              Sponsors
+            </Link>
+            <Link
+              href="/aboutus"
+              onClick={toggleMenu}
+              className="text-3xl hover:text-green-400 px-10"
+            >
+              About Us
+            </Link>
+            <Link
+              href="/contactus"
+              onClick={toggleMenu}
+              className="text-3xl hover:text-green-400 px-10"
+            >
+              Contact US
+            </Link>
           </div>
         </motion.div>
       )}
