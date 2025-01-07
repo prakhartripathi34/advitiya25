@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function DecorativeFrame({ children }) {
   return (
-    <div className="relative mt-16 mb-0 w-full max-w-2xl my-16">
+    <div className="relative mt-16 md:mb-0 w-full max-w-md mb-8  md:max-w-2xl my-16">
       {/* Outer container with aspect ratio */}
       <div className="relative w-full pb-[66.67%]"> {/* 3:2 aspect ratio */}
         {/* Green frame with decorative shapes */}
