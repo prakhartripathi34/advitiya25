@@ -32,7 +32,7 @@ export default function Page() {
     <div>
       <section className="bg-[#12181E] flex justify-between items-center px-[4%] py-[1.4%]">
         {/* Logo */}
-        <div className="md:w-[17%] w-[35%]">
+        <div className="md:w-[17%] w-[45%] sm:w-[40%]">
           <div className="aspect-[895/127]">
             <Image
               src={logo}
@@ -43,10 +43,10 @@ export default function Page() {
         </div>
 
         {/* Menu and Sign-In Buttons */}
-        <div className="flex">
+        <div className="flex justify-center items-center">
           {!isOpen && (
             <Link href="/signin">
-              <button className="text-white md:py-[2%] py-[1.7%] px-6 md:px-8 text-lg rounded-full bg-gradient-to-b from-[#43F27F] to-[#0A772F] mr-5">
+              <button className="text-white md:py-[2%] py-[1%] px-6 md:px-8 text-md lg:text-lg rounded-full bg-gradient-to-b from-[#43F27F] to-[#0A772F] mr-5">
                 SIGN IN
               </button>
             </Link>
@@ -56,32 +56,35 @@ export default function Page() {
           <div className="relative">
             <button
               onClick={toggleMenu}
-              className="text-white py-[2%] text-lg mx-4"
+              className="text-white py-[2%] text-md md:text-lg mx-2 md:mx-4"
             >
               {isOpen ? "CLOSE" : "MENU"}
             </button>
+            {isOpen && (
+              <div className="bg-transparent/50 backdrop:blur-xl fixed inset-0 z-50 inset-y-[2.8rem] h-[calc(100vh-2.8rem)] md:inset-y-[4.3rem] md:h-[calc(100vh-4.3rem)] w-screen" onClick={toggleMenu}>
 
-            {/* Full-Screen Popup Menu */}
+              </div>
+            )}
             {isOpen && (
               <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.1 }}
+              initial={{ opacity: 0, x: -150 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 70 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="fixed inset-0 inset-y-[2.8rem] h-[calc(100vh-2.8rem)] md:inset-y-[4.3rem] md:h-[calc(100vh-4.3rem)] w-screen bg-cover bg-right bg-no-repeat flex flex-col justify-center items-center gap-6 z-50"
+                className="fixed inset-0 inset-y-[2.8rem] h-[calc(100vh-2.8rem)] md:inset-y-[4.3rem] md:h-[calc(100vh-4.3rem)] md:w-2/5 w-screen bg-cover bg-[-15rem] bg-no-repeat flex flex-col justify-center items-center gap-6 z-50"
                 style={{ backgroundImage: "url('/header/image.png')" }}
               >
-                <img
+                {/* <img
                   src="/header/design.png"
-                  className="absolute top-1/3 -z-10 md:right-[10vw] xl:top-1/3 xl:left-[72vw] h-96"
+                  className="absolute top-1/3 hidden md:block -z-10 md:right-[10vw] xl:top-1/3 xl:left-[72vw] h-96"
                   alt="Background Design"
-                />
+                /> */}
 
                 {/* Menu Links */}
                 <motion.div
-                initial={{ opacity: 0, x: -150 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 70 }}
+                // initial={{ opacity: 0, x: -150 }}
+                // animate={{ opacity: 1, x: 0 }}
+                // exit={{ opacity: 0, x: 70 }}
                 className="flex-col h-full w-full justify-start items-center text-white space-y-16">
                     <section className="w-full flex mt-32">
                         {pathname === "/" ? <Svgg /> : <Svgw />}
